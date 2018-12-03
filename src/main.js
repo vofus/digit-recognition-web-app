@@ -1,5 +1,4 @@
 import Vue from "vue";
-import axios from "axios";
 import _round from "lodash/round";
 
 import "materialize-css/dist/css/materialize.min.css";
@@ -9,9 +8,6 @@ import App from "./App";
 import router from "./router";
 import store from "./store";
 
-Vue.config.productionTip = false;
-
-Vue.http = Vue.prototype.$http = axios;
 Vue.config.productionTip = false;
 Vue.filter("toPercent", (value) => _round(value * 100, 2));
 
