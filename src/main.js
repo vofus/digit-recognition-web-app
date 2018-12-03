@@ -6,7 +6,6 @@ import "materialize-css/dist/js/materialize.min.js";
 
 import App from "./App";
 import router from "./router";
-import store from "./store";
 
 Vue.config.productionTip = false;
 Vue.filter("toPercent", (value) => _round(value * 100, 2));
@@ -15,6 +14,5 @@ Vue.filter("toPercent", (value) => _round(value * 100, 2));
 new Vue({
 	components: {App},
 	router,
-	store,
 	render: (h) => h(App)
 }).$mount("#app");
