@@ -1,28 +1,26 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div id="app">
+		<nav class="blue-grey">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo logo">Digit recognition web app</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<router-link active-class="active" tag="li" to="/recognition"><a>Распознавание</a></router-link>
+				</ul>
+			</div>
+		</nav>
+
+		<router-view></router-view>
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+	export default {
+		name: "digit-recognition-app"
+	};
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="css" scoped>
+.logo {
+	margin-left: 24px;
 }
 </style>
